@@ -1,0 +1,5 @@
+ws_port: 20102
+ws_keymode: AES-128
+server_name: dfcrx9j5sd7fosuv
+http_port: 20100
+boot_nodes: []
