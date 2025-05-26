@@ -8,7 +8,7 @@ edition = "2024"
 # web
 actix-web = "4"
 tokio = { version = "1", features = ["full"] }
-libp2p = { version = "0.53.2", features = ["tokio", "tcp", "yamux", "noise", "macros", "identify", "ping", "kad", "rendezvous", "mdns"] }
+libp2p = { version = "0.55.0", features = ["tokio", "tcp", "yamux", "noise", "macros", "identify", "ping", "kad", "rendezvous", "mdns"] }
 futures = "0.3"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
@@ -20,3 +20,10 @@ md5 = "0.7.0"
 rand = "0.9.1"
 serde_yaml = "0.9.34"
 yansi = "1.0.1"
+log = "0.4.27"
+
+
+blake3 = "1.4"
+sled = "0.34.7"
+actix-web-actors = "4.3.1"
+actix = "0.13.5"

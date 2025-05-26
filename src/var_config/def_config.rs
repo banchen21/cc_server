@@ -21,6 +21,7 @@ pub struct Config {
     pub(crate) http_port: u16,
     // 其他节点
     pub(crate) boot_nodes: Vec<String>,
+    pub(crate) ipfs_api_port: String, // New field
 }
 
 use super::yml_util::generate_random_key;
@@ -35,6 +36,7 @@ pub fn inti_config() -> Result<Config, Box<dyn Error>> {
         ws_keymode: "AES-128".to_owned(),
         server_name: key,
         boot_nodes: vec![],
+        ipfs_api_port: "5001".to_string(), // Default IPFS API
     };
     match fs::metadata(&file_path) {
         Err(_) => {
@@ -43,6 +45,7 @@ pub fn inti_config() -> Result<Config, Box<dyn Error>> {
             if let Err(err) = yml_util::write_config_to_yml(&config, &file_path) {
                 println!("无法写入配置文件：{}", err);
             }
+            panic!("请重启程序")
         }
         Ok(_) => {
             let text = "检测到配置文件存在".to_string();

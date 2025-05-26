@@ -1,5 +1,6 @@
 ws_port: 20102
 ws_keymode: AES-128
-server_name: dfcrx9j5sd7fosuv
-http_port: 20100
+server_name: acmdpe5tyd9i13je
+http_port: 20103
 boot_nodes: []
+ipfs_api_port: '5001'
